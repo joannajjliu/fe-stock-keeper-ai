@@ -16,15 +16,17 @@
   2. clean cache: `yarn cache clean`
   3. re-install dependencies: `yarn install`
 
-### Linting, prettier, and pre-commit hooks
+### Linting, prettier, and pre-commit hooks (in-progress)
 
-- Rules have been implemented per [Apr 2020 article by Manish Sharma](https://medium.com/@loclghst/set-up-eslint-prettier-and-pre-commit-hooks-using-husky-for-react-73e7a51cda26)
+- Rules implemented per [Oct 2020 article by Ajay Maurya](https://dev.to/ajmaurya/set-up-eslint-prettier-and-pre-commit-hooks-using-husky-for-wordpress-from-scratch-1djk)
+  > _Archive_: Rules have been implemented per [Apr 2020 article by Manish Sharma](https://medium.com/@loclghst/set-up-eslint-prettier-and-pre-commit-hooks-using-husky-for-react-73e7a51cda26)
 
 ### Folders structure
 
 - We will try using [atomic web design](https://bradfrost.com/blog/post/atomic-web-design/#molecules) for this set-up template, as referenced by the official [React docs](https://reactjs.org/docs/faq-structure.html)
 
-  - Atoms (ex. buttons, checkbox) and Molecules' (ex. Search bar with Search button) components will likely be derived from Bootstrap, so are not referenced in the folder setup. Feel free to add these folders as suitable if creating new `atoms` or `molecules` components
+  - `Atoms` (ex. buttons, checkbox) and `Molecules'` (ex. Search bar with Search button) components will likely be derived from Bootstrap, so are not referenced in the folder setup. Feel free to add these folders as suitable if creating new `atoms` or `molecules` components
+  - `Organisms` and `Templates'` components may be redundant for simple apps (will assess later if one can be removed)
     >
         .
         ├── ...
@@ -33,7 +35,7 @@
         │ ├── organisms             # Ex. Header, Footer
         │ ├── pages                 # Ex. dashboard page, inventory page
         │ ├── shared                # global styles, constants, re-useable functions
-        │ └── templates             # Ex. green header, Brown header (may not be used often)
+        │ └── templates             # Ex. DashboardHeader, MobileFooter, WebFooter
         └── ...
 
 ### Styling
@@ -54,7 +56,7 @@
 
 ## Bundling files for production
 
-- Once satisified with development, run `yarn build` to bundle the files in `./src` folder into the `./build` folder
+- Once satisified with development, run `yarn build` to bundle the files from `./src` folder into the `./build` folder
 
 ## Process automation (in-progress)
 

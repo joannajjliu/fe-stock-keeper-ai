@@ -4,22 +4,12 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "react-hooks",
-    "airbnb",
-    "plugin:prettier/recommended",
-    "prettier/react"
-  ],
-  "extends": [
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
+  "plugins": ["@typescript-eslint", "react-hooks"],
+  "extends": ["plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
-    "prettier/prettier": ["error", { "singleQuote": true }],
     "quotes": [2, "single", { "avoidEscape": true }]
   },
   "settings": {
