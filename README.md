@@ -25,16 +25,16 @@
 - We will try using [atomic web design](https://bradfrost.com/blog/post/atomic-web-design/#molecules) for this set-up template, as referenced by the official [React docs](https://reactjs.org/docs/faq-structure.html)
 
   - Atoms (ex. buttons, checkbox) and Molecules' (ex. Search bar with Search button) components will likely be derived from Bootstrap, so are not referenced in the folder setup. Feel free to add these folders as suitable if creating new `atoms` or `molecules` components
-
-    .
-    ├── ...
-    ├── src # Main point of entry for React code
-    │ ├── api # Handling of endpoints
-    │ ├── organisms # Ex. Header, Footer
-    │ ├── pages # Ex. dashboard page, inventory page
-    │ ├── shared # global styles, constants, re-useable functions
-    │ └── templates # Ex. green header, Brown header (may not be used often)
-    └── ...
+    >
+        .
+        ├── ...
+        ├── src                     # Main point of entry for React code
+        │ ├── api                   # Handling of endpoints
+        │ ├── organisms             # Ex. Header, Footer
+        │ ├── pages                 # Ex. dashboard page, inventory page
+        │ ├── shared                # global styles, constants, re-useable functions
+        │ └── templates             # Ex. green header, Brown header (may not be used often)
+        └── ...
 
 ### Styling
 
