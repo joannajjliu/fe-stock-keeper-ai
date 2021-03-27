@@ -7,7 +7,7 @@ const Dashboard: React.FC = () => (
     <div className="ajumbotron jumbotron-fluid stock-keeper-dashboard__inventory-jumbotron">
       <div className="container stock-keeper-dashboard__inventory-container">
         <h1 className="display-4 stock-keeper-dashboard__inventory-container--header">
-          <Link to="/fe-stock-keeper-ai/hospital">Inventory</Link>
+          <Link to="/hospital">Inventory</Link>
         </h1>
       </div>
     </div>

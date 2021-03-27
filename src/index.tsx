@@ -9,6 +9,8 @@ import HospitalTable from './pages/HospitalTable';
 import StickyFooter from './templates/StickyFooter';
 import './styles/global.scss';
 
+const baseLink = '/fe-stock-keeper-ai';
+
 const App = () => (
   <Router>
     <body className="d-flex flex-column h-100 stock-keeper-global__body">
@@ -18,13 +20,13 @@ const App = () => (
           <div className="row py-lg-5">
             <div className="col-lg-6 col-md-8 mx-auto">
               <Switch>
-                <Route exact path="/fe-stock-keeper-ai/">
+                <Route exact path={'/'}>
                   <Dashboard />
                 </Route>
-                <Route path="/fe-stock-keeper-ai/hospital">
+                <Route path={'/hospital'}>
                   <HospitalTable />
                 </Route>
-                <Route path="/fe-stock-keeper-ai/hospital-room">
+                <Route path={'/hospital-room'}>
                   <HospitalRoomTable />
                 </Route>
               </Switch>
