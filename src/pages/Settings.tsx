@@ -2,7 +2,7 @@ import React from 'react';
 
 const Settings: React.FC = () => (
   <div>
-    <h1>Page in progress</h1>
+    <h1>Page under construction</h1>
   </div>
 );
 

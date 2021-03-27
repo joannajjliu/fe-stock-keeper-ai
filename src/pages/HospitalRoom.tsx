@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { format } from 'date-fns';
 import { getRoomData } from '../api/roomStorageApi';
 import TwoColumnsTable from '../organisms/TwoColumnsTable';
+import '../styles/HospitalRoom.scss';
 
 const tableProps = {
   colOneTitle: 'Item',
@@ -46,7 +47,7 @@ const HospitalRoom: React.FC = () => {
           <TwoColumnsTable {...tableProps} items={itemsNormalized} />
         </>
       ) : (
-        <>Loading</>
+        <div className="spinner-border stock-keeper-hospital-room__spinner" role="status"></div>
       )}
     </div>
   );
