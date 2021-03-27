@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header: React.FC = () => (
-  <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-5">
     <div className="container-fluid">
       <a className="navbar-brand" href="#">
         Stockkeeper.ai
@@ -35,6 +35,12 @@ const Header: React.FC = () => (
             </a>
           </li>
         </ul>
+        <form className="d-flex">
+          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button className="btn btn-outline-success" type="submit">
+            Search
+          </button>
+        </form>
       </div>
     </div>
   </nav>
