@@ -21,7 +21,7 @@ const HospitalRoomTable: React.FC = () => {
   }
   return (
     <div>
-      <h1>Fl 1 - Diagnostic Imaging</h1>
+      <h1 class="page-title">Floor 1 - Diagnostic Imaging</h1>
       <img src={lastImage} className="img-fluid" alt="Responsive image"></img>
       <p className="subtitle">{format(lastUpdatedFormatted, 'dd MMMM yyyy HH:mm')}</p>
       <TwoColumnsTable {...tableProps} items={itemsNormalized} />
