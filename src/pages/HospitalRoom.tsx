@@ -38,7 +38,7 @@ const HospitalRoom: React.FC = () => {
 
   return (
     <div>
-      <h1>{roomName}</h1>
+      <h1 className="page-title">{roomName}</h1>
       {roomData ? (
         <>
           {lastImage && <img src={lastImage} className="img-fluid" alt="Responsive image"></img>}
