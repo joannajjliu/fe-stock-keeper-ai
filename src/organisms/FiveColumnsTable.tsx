@@ -1,6 +1,13 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const FiveColumnsTable: React.FC<any> = ({ data, colOneTitle, colTwoTitle, colThreeTitle, colFourTitle }: any) => {
+  const history = useHistory();
+
+  function navigateToHospitalRoom() {
+    history.push('/hospital-room');
+  }
+
   return (
     <div className="table-responsive">
       <table className="table table-striped table-sm">
@@ -21,7 +28,7 @@ const FiveColumnsTable: React.FC<any> = ({ data, colOneTitle, colTwoTitle, colTh
               <td>{row.category.join()}</td>
               <td>{row.status}</td>
               <td>
-                <button />
+                <button onClick={navigateToHospitalRoom}>More</button>
               </td>
             </tr>
           ))}
