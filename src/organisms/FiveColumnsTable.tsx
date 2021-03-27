@@ -27,7 +27,7 @@ const FiveColumnsTable: React.FC<any> = ({ data, colOneTitle, colTwoTitle, colTh
               <td>{row.floor}</td>
               <td>{row.unit}</td>
               <td>{row.category.join()}</td>
-              <td>{row.status}</td>
+              <td className="room-status">{row.status}</td>
               <td>
                 <button
                   type="button"
