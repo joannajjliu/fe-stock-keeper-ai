@@ -4,7 +4,7 @@ const Header: React.FC = () => (
   <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-5">
     <div className="container-fluid">
       <a className="navbar-brand" href="#">
-        Stockkeeper.ai
+        StockKeeper.ai
       </a>
       <button
         className="navbar-toggler"
