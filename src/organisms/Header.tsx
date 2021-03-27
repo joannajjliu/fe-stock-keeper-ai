@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-5">
       <div className="container-fluid">
-        <Link className="navbar-brand" aria-current="page" to="/fe-stock-keeper-ai/">
+        <Link className="navbar-brand" aria-current="page" to="/">
           StockKeeper.ai
         </Link>
         <button
