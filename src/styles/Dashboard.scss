@@ -1,0 +1,44 @@
+@import './global.scss';
+
+.stock-keeper-dashboard {
+  &__inventory-jumbotron {
+    padding: 3rem;
+    background-image: url('../images/kunal-shinde--f0YLss50Bs-unsplash.jpg');
+    background-size: cover;
+    height: 20rem;
+    text-align: center;
+  }
+
+  &__inventory-container {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  &__inventory-container--header {
+    color: white;
+    font-weight: 600;
+    vertical-align: middle;
+    margin: auto;
+  }
+
+  &__settings-jumbotron {
+    padding: 3rem;
+    background-image: url('../images/jay-mantri-TFyi0QOx08c-unsplash.jpg');
+    background-size: cover;
+    height: 14rem;
+    text-align: center;
+  }
+
+  &__settings-container {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  &__settings-container--header {
+    color: $stockkeeper-grey;
+    font-family: $stockkeeper-secondary-font;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: auto;
+  }
+}

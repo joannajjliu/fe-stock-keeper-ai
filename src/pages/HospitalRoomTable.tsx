@@ -5,6 +5,10 @@ const tableProps = {
   colOneTitle: 'Item',
   colTwoTitle: 'Quantity',
 };
-const HospitalRoomTable: React.FC = () => <TwoColumnsTable {...tableProps} />;
+const HospitalRoomTable: React.FC = () => (
+  <div>
+    <TwoColumnsTable {...tableProps} />
+  </div>
+);
 
 export default HospitalRoomTable;

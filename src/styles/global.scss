@@ -1,0 +1,43 @@
+$stockkeeper-blue: #3855f5;
+$stockkeeper-light-blue: #8c9cf7f3;
+$stockkeeper-grey: #262626;
+$stockkeeper-primary-font: Roboto, sans-serif;
+$stockkeeper-secondary-font: Calibri, sans-serif;
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  font-size: larger;
+  color: $stockkeeper-light-blue;
+}
+
+a:active {
+  text-decoration: none;
+  color: $stockkeeper-blue;
+}
+
+.animated {
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.icon {
+  color: white;
+  vertical-align: middle;
+}
+
+.stock-keeper-global {
+  &__body {
+    font-family: $stockkeeper-primary-font;
+  }
+}
