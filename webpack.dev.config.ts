@@ -23,11 +23,8 @@ const config: webpack.Configuration = {
         },
       },
       {
-        test: /\.css$/i,
-        loader: 'css-loader',
-        options: {
-          url: true,
-        },
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
