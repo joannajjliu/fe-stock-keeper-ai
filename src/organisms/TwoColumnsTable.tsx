@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getRoomData } from '../api/roomStorageApi';
 
-const TwoColumnsTable: React.FC<any> = ({ colOneTitle, colTwoTitle }: any) => {
+const TwoColumnsTable: React.FC<any> = ({ colOneTitle, colTwoTitle, items }: any) => {
   const [roomData, setRoomData] = useState<any>({});
 
   useEffect(() => {
@@ -18,14 +18,11 @@ const TwoColumnsTable: React.FC<any> = ({ colOneTitle, colTwoTitle }: any) => {
           </tr>
         </thead>
         <tbody>
-          {roomData.items &&
-            roomData.items.map((item: any, id: number) => (
+          {items &&
+            items.map((item: any, id: number) => (
               <tr key={id}>
                 <td>{item.name}</td>
                 <td>{parseInt(item.count)}</td>
-                <td>
-                  <button />
-                </td>
               </tr>
             ))}
         </tbody>
