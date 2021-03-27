@@ -16,13 +16,13 @@ const App = () => (
           <div className="row py-lg-5">
             <div className="col-lg-6 col-md-8 mx-auto">
               <Switch>
-                <Route path="/hospital">
+                <Route path="/fe-stock-keeper-ai/hospital">
                   <HospitalTable />
                 </Route>
-                <Route path="/hospital-room">
+                <Route path="/fe-stock-keeper-ai/hospital-room">
                   <HospitalRoomTable />
                 </Route>
-                <Route exact path="/">
+                <Route exact path="/fe-stock-keeper-ai/">
                   <HospitalTable />
                   <HospitalRoomTable />
                 </Route>

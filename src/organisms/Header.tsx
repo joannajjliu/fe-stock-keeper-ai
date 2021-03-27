@@ -21,17 +21,17 @@ const Header: React.FC = () => (
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <ul className="navbar-nav ms-auto mb-2 mb-md-0">
           <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" to="/">
+            <Link className="nav-link active" aria-current="page" to="/fe-stock-keeper-ai/">
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" to="/hospital">
+            <Link className="nav-link active" aria-current="page" to="/fe-stock-keeper-ai/hospital">
               Hospital
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" to="/hospital-room">
+            <Link className="nav-link active" aria-current="page" to="/fe-stock-keeper-ai/hospital-room">
               Room
             </Link>
           </li>
