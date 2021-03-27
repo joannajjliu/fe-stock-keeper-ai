@@ -29,7 +29,13 @@ const FiveColumnsTable: React.FC<any> = ({ data, colOneTitle, colTwoTitle, colTh
               <td>{row.category.join()}</td>
               <td>{row.status}</td>
               <td>
-                <button onClick={() => navigateToHospitalRoom(row.unit)}>More</button>
+                <button
+                  type="button"
+                  className="btn stckkeeper-btn-blue"
+                  onClick={() => navigateToHospitalRoom(row.unit)}
+                >
+                  More
+                </button>
               </td>
             </tr>
           ))}

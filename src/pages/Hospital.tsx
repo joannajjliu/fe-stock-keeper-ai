@@ -10,11 +10,11 @@ const tableProps = {
   colFourTitle: 'Status',
 };
 
-const HospitalTable: React.FC = () => (
+const Hospital: React.FC = () => (
   <div>
     <h1>Medical Supplies Inventory</h1>
     <FiveColumnsTable {...tableProps} />
   </div>
 );
 
-export default HospitalTable;
+export default Hospital;

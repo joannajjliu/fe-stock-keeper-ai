@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Dashboard from './pages/Dashboard';
 import DefaultHeader from './templates/DefaultHeader';
-import HospitalRoomTable from './pages/HospitalRoomTable';
-import HospitalTable from './pages/HospitalTable';
+import HospitalRoom from './pages/HospitalRoom';
+import Hospital from './pages/Hospital';
 import PageNotFound from './pages/PageNotFound';
 import Settings from './pages/Settings';
 import StickyFooter from './templates/StickyFooter';
@@ -27,10 +27,10 @@ const App = () => (
                   <Dashboard />
                 </Route>
                 <Route exact path={'/hospital'}>
-                  <HospitalTable />
+                  <Hospital />
                 </Route>
                 <Route path={'/hospital-room'}>
-                  <HospitalRoomTable />
+                  <HospitalRoom />
                 </Route>
                 <Route exact path={'/settings'}>
                   <Settings />
