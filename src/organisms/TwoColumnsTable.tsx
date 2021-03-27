@@ -1,13 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { getRoomData } from '../api/roomStorageApi';
+import React from 'react';
 
 const TwoColumnsTable: React.FC<any> = ({ colOneTitle, colTwoTitle, items }: any) => {
-  const [roomData, setRoomData] = useState<any>({});
-
-  useEffect(() => {
-    getRoomData().then((data: any) => setRoomData(data));
-  }, []);
-
   return (
     <div className="table-responsive">
       <table className="table table-striped table-sm">
