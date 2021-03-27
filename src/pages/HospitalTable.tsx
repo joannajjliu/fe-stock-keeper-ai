@@ -9,6 +9,7 @@ const tableProps = {
   colThreeTitle: 'Category',
   colFourTitle: 'Status',
 };
+
 const HospitalTable: React.FC = () => (
   <div>
     <h1 className="page-title">Medical Supplies Inventory</h1>
