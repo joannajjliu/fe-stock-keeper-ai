@@ -4,7 +4,8 @@ import { useHistory } from 'react-router-dom';
 const FiveColumnsTable: React.FC<any> = ({ data, colOneTitle, colTwoTitle, colThreeTitle, colFourTitle }: any) => {
   const history = useHistory();
 
-  function navigateToHospitalRoom() {
+  function navigateToHospitalRoom(unit: string) {
+    localStorage.setItem('room-name', unit);
     history.push('/hospital-room');
   }
 
@@ -28,7 +29,7 @@ const FiveColumnsTable: React.FC<any> = ({ data, colOneTitle, colTwoTitle, colTh
               <td>{row.category.join()}</td>
               <td>{row.status}</td>
               <td>
-                <button onClick={navigateToHospitalRoom}>More</button>
+                <button onClick={() => navigateToHospitalRoom(row.unit)}>More</button>
               </td>
             </tr>
           ))}
