@@ -9,6 +9,7 @@ const tableProps = {
 };
 
 const HospitalRoomTable: React.FC = () => {
+  const roomName = localStorage.getItem('room-name') || 'Hospital Room';
   const [roomData, setRoomData] = useState<any>(null);
   const [lastUpdated, setlastUpdated] = useState<any>(null);
   const [lastImage, setlastImage] = useState<string>('');
@@ -24,21 +25,29 @@ const HospitalRoomTable: React.FC = () => {
   useEffect(() => {
     if (roomData) {
       const itemsNormalizedCopy = [];
-      for (const [key, value] of Object.entries(roomData.items)) {
-        itemsNormalizedCopy.push({ name: key, count: value });
+      if (roomData && roomData.items && Object.entries(roomData.items).length) {
+        for (const [key, value] of Object.entries(roomData.items)) {
+          itemsNormalizedCopy.push({ name: key, count: value });
+        }
       }
-      setlastImage(roomData.lastImageURL);
-      setlastUpdated(new Date(roomData.updated));
+      roomData.lastImageURL && setlastImage(roomData.lastImageURL);
+      roomData.updated && setlastUpdated(new Date(roomData.updated));
       setItemsNormalized(itemsNormalizedCopy);
     }
   }, [roomData]);
 
   return (
     <div>
-      <h1>Fl 1 - Diagnostic Imaging</h1>
-      <img src={lastImage} className="img-fluid" alt="Responsive image"></img>
-      <p className="subtitle">{lastUpdated ? format(new Date(lastUpdated), 'dd MMMM yyyy HH:mm') : ''}</p>
-      <TwoColumnsTable {...tableProps} items={itemsNormalized} />
+      <h1>{roomName}</h1>
+      {roomData ? (
+        <>
+          {lastImage && <img src={lastImage} className="img-fluid" alt="Responsive image"></img>}
+          <p className="subtitle">{lastUpdated ? format(new Date(lastUpdated), 'dd MMMM yyyy HH:mm') : ''}</p>
+          <TwoColumnsTable {...tableProps} items={itemsNormalized} />
+        </>
+      ) : (
+        <>Loading</>
+      )}
     </div>
   );
 };
