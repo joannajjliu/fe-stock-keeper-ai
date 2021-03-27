@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { format } from 'date-fns';
+import { getRoomData } from '../api/roomStorageApi';
 import TwoColumnsTable from '../organisms/TwoColumnsTable';
-import { hospitalRoomMockData } from '../data/hospitalRoomMockData';
 
 const tableProps = {
   colOneTitle: 'Item',
@@ -9,21 +9,35 @@ const tableProps = {
 };
 
 const HospitalRoomTable: React.FC = () => {
-  const mockData = hospitalRoomMockData;
-  const lastUpdated = mockData[0].updated;
-  const lastUpdatedFormatted = new Date(lastUpdated);
-  const lastImage = mockData[0].lastImageURL;
-  const itemsObj = mockData[0].items;
+  const [roomData, setRoomData] = useState<any>(null);
+  const [lastUpdated, setlastUpdated] = useState<any>(null);
+  const [lastImage, setlastImage] = useState<string>('');
+  const [itemsNormalized, setItemsNormalized] = useState<any>([]);
 
-  const itemsNormalized = [];
-  for (const [key, value] of Object.entries(itemsObj)) {
-    itemsNormalized.push({ name: key, count: value });
-  }
+  useEffect(() => {
+    const interval = setInterval(() => {
+      getRoomData().then((data: any) => setRoomData(data));
+    }, 1000); // runs every 1 second.
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (roomData) {
+      const itemsNormalizedCopy = [];
+      for (const [key, value] of Object.entries(roomData.items)) {
+        itemsNormalizedCopy.push({ name: key, count: value });
+      }
+      setlastImage(roomData.lastImageURL);
+      setlastUpdated(new Date(roomData.updated));
+      setItemsNormalized(itemsNormalizedCopy);
+    }
+  }, [roomData]);
+
   return (
     <div>
       <h1>Fl 1 - Diagnostic Imaging</h1>
       <img src={lastImage} className="img-fluid" alt="Responsive image"></img>
-      <p className="subtitle">{format(lastUpdatedFormatted, 'dd MMMM yyyy HH:mm')}</p>
+      <p className="subtitle">{lastUpdated ? format(new Date(lastUpdated), 'dd MMMM yyyy HH:mm') : ''}</p>
       <TwoColumnsTable {...tableProps} items={itemsNormalized} />
     </div>
   );
