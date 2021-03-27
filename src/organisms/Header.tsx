@@ -4,9 +4,7 @@ import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 const Header: React.FC = () => (
   <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-5">
     <div className="container-fluid">
-      <a className="navbar-brand" href="#">
-        StockKeeper.ai
-      </a>
+      <a className="navbar-brand">StockKeeper.ai</a>
       <button
         className="navbar-toggler"
         type="button"
@@ -36,12 +34,6 @@ const Header: React.FC = () => (
             </Link>
           </li>
         </ul>
-        <form className="d-flex">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button className="btn btn-outline-success" type="submit">
-            Search
-          </button>
-        </form>
       </div>
     </div>
   </nav>
