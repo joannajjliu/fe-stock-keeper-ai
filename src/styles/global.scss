@@ -1,10 +1,9 @@
 $stockkeeper-blue: #3855f5;
+$stockkeeper-grey: #262626;
 $stockkeeper-light-blue: #8c9cf7f3;
 $stockkeeper-light-grey: #d7dedf;
-$stockkeeper-grey: #262626;
 $stockkeeper-primary-font: Roboto, sans-serif;
 $stockkeeper-secondary-font: Calibri, sans-serif;
-
 a:link {
   text-decoration: none;
   color: white;
@@ -37,8 +36,13 @@ a:active {
   vertical-align: middle;
 }
 
-.subtitle {
-  font-size: 14px;
+.page-title {
+  margin-bottom: 2rem;
+}
+
+.stckkeeper-btn-blue {
+  color: white;
+  background-color: $stockkeeper-blue;
 }
 
 .stock-keeper-global {
@@ -47,6 +51,6 @@ a:active {
   }
 }
 
-.page-title {
-    margin-bottom: 2rem;
+.subtitle {
+  font-size: 14px;
 }

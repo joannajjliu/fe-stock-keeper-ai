@@ -8,7 +8,7 @@ const tableProps = {
   colTwoTitle: 'Quantity',
 };
 
-const HospitalRoomTable: React.FC = () => {
+const HospitalRoom: React.FC = () => {
   const roomName = localStorage.getItem('room-name') || 'Hospital Room';
   const [roomData, setRoomData] = useState<any>(null);
   const [lastUpdated, setlastUpdated] = useState<any>(null);
@@ -52,4 +52,4 @@ const HospitalRoomTable: React.FC = () => {
   );
 };
 
-export default HospitalRoomTable;
+export default HospitalRoom;

@@ -14,7 +14,9 @@ const Dashboard: React.FC = () => (
     <div className="mt-3"></div>
     <div className="jumbotron jumbotron-fluid stock-keeper-dashboard__settings-jumbotron">
       <div className="container stock-keeper-dashboard__settings-container">
-        <h1 className="display-4 stock-keeper-dashboard__settings-container--header">Settings</h1>
+        <h1 className="display-4 stock-keeper-dashboard__settings-container--header">
+          <Link to="/settings">Settings</Link>
+        </h1>
       </div>
     </div>
   </>

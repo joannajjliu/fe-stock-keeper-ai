@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import DefaultHeader from './templates/DefaultHeader';
 import Dashboard from './pages/Dashboard';
-import HospitalRoomTable from './pages/HospitalRoomTable';
-import HospitalTable from './pages/HospitalTable';
+import DefaultHeader from './templates/DefaultHeader';
+import HospitalRoom from './pages/HospitalRoom';
+import Hospital from './pages/Hospital';
+import PageNotFound from './pages/PageNotFound';
+import Settings from './pages/Settings';
 import StickyFooter from './templates/StickyFooter';
+
 import './styles/global.scss';
 
 const baseLink = '/fe-stock-keeper-ai';
@@ -23,11 +26,17 @@ const App = () => (
                 <Route exact path={'/'}>
                   <Dashboard />
                 </Route>
-                <Route path={'/hospital'}>
-                  <HospitalTable />
+                <Route exact path={'/hospital'}>
+                  <Hospital />
                 </Route>
                 <Route path={'/hospital-room'}>
-                  <HospitalRoomTable />
+                  <HospitalRoom />
+                </Route>
+                <Route exact path={'/settings'}>
+                  <Settings />
+                </Route>
+                <Route path={'/'}>
+                  <PageNotFound />
                 </Route>
               </Switch>
             </div>
