@@ -2,3 +2,4 @@ node_modules
 Makefile
 yarn-error.log
 .idea
+build

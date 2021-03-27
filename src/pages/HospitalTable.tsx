@@ -12,7 +12,7 @@ const tableProps = {
 
 const HospitalTable: React.FC = () => (
   <div>
-    <h1>Medical Supplies Inventory</h1>
+    <h1 className="page-title">Medical Supplies Inventory</h1>
     <FiveColumnsTable {...tableProps} />
   </div>
 );
