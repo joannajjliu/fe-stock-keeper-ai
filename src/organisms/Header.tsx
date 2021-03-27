@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 const Header: React.FC = () => (
   <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-5">
@@ -20,19 +21,19 @@ const Header: React.FC = () => (
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <ul className="navbar-nav ms-auto mb-2 mb-md-0">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">
+            <Link className="nav-link active" aria-current="page" to="/">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Link
-            </a>
+            <Link className="nav-link active" aria-current="page" to="/hospital">
+              Hospital
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">
-              Disabled
-            </a>
+            <Link className="nav-link active" aria-current="page" to="/hospital-room">
+              Room
+            </Link>
           </li>
         </ul>
         <form className="d-flex">
