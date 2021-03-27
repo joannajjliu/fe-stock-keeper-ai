@@ -2,6 +2,9 @@ $stockkeeper-blue: #3855f5;
 $stockkeeper-grey: #262626;
 $stockkeeper-light-blue: #8c9cf7f3;
 $stockkeeper-light-grey: #d7dedf;
+$stockkeeper-red: #f34646;
+$stockkeeper-yellow: #f8c726;
+$stockkeeper-green: #45d333;
 $stockkeeper-primary-font: Roboto, sans-serif;
 $stockkeeper-secondary-font: Calibri, sans-serif;
 a:link {
@@ -34,6 +37,22 @@ a:active {
 .icon {
   color: white;
   vertical-align: middle;
+}
+
+.icon--red {
+  color: $stockkeeper-red;
+}
+
+.icon--yellow {
+  color: $stockkeeper-yellow;
+}
+
+.icon--green {
+  color: $stockkeeper-green;
+}
+
+.maintain-spaces {
+  white-space: pre-wrap;
 }
 
 .page-title {

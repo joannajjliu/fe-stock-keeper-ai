@@ -27,7 +27,14 @@ const FiveColumnsTable: React.FC<any> = ({ data, colOneTitle, colTwoTitle, colTh
               <td>{row.floor}</td>
               <td>{row.unit}</td>
               <td>{row.category.join()}</td>
-              <td>{row.status}</td>
+              <td className={'maintain-spaces'}>
+                <i
+                  className={`bi bi-circle-fill icon--${
+                    row.status === 2 ? 'green' : row.status === 1 ? 'yellow' : 'red'
+                  }`}
+                ></i>
+                {row.status === 2 ? ' HIGH' : row.status === 1 ? ' MED ' : ' LOW '}
+              </td>
               <td>
                 <button
                   type="button"
